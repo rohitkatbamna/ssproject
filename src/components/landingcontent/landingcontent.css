@@ -5,9 +5,24 @@
     font-family: 'Poppins', sans-serif;
     background-repeat: no-repeat;
     background-size: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 25px;
 }
 
 .landing-content-main-world-wide {
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.landing-content-hotels-cards:hover {
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width:800px) {
+    .landing-content-main-all-of-it {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }

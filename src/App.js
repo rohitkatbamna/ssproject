@@ -1,13 +1,16 @@
 import React from 'react';
-import Navbarforall from './components/navbarforall/navbarforall';
-import Landingcontentmain from './components/landingcontent/landingcontent';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Landingpage from './pages/landingpage';
 
 function App() {
   return (
-    <>
-    <Navbarforall />
-    <Landingcontentmain />
-    </>
+    <div>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Landingpage />} exact/>
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
