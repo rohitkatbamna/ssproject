@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState , useEffect} from "react";
 import './landingcontent.css';
 import axios from "axios";
-import cityobject from '../../assets/places';
+
 import Notsurecomponent from "../notsurecomponent/notsurecomponent";
 
 function Landingcontentmain(){
@@ -96,15 +96,15 @@ function Landingcontentmain(){
                             <button type="button" className="btn btn-lg" style={{backgroundColor:'#935B4F',borderRadius:'26px',color:'white',fontWeight:'600'}}>Plan A Trip <FontAwesomeIcon icon={faArrowCircleDown}/></button>
                         </div>
                     </div>
-                    <div className="row">
-                        <div className="col-xl-8 col-xxl-8 col-lg-9 col-md-12 col-sm-12 ms-auto me-auto mt-5">
-                            <div className="input-group mb-3 d-flex align-items-center flex-wrap" style={{height:'70px'}}>
-                                <input type="text" className="form-control" placeholder="Berlin" aria-label="Recipient's username" aria-describedby="button-addon2" style={{borderRadius:'16px'}} onChange={onChangefun}/>
-                                <h4 className="ms-2 me-2">Check In</h4>
-                                <input type="date" className="form-control" placeholder="Date" aria-label="Date" aria-describedby="button-addon2" style={{borderRadius:'16px'}} onChange={onChangedate}/>
-                                <h4 className="ms-2 me-2">Check Out</h4>
-                                <input type="date" className="form-control" placeholder="Date" aria-label="Date" aria-describedby="button-addon2" style={{borderRadius:'16px'}} onChange={onChangedate1}/>
-                                <button className="btn btn-danger samplechangebutton" type="button" id="button-addon2" style={{borderRadius:'46px',width:'60px'}}onClick={onClick}><FontAwesomeIcon icon={faSearch} /></button>
+                    <div className="row mt-5">
+                        <div className="col-xl-12 col-xxl-12 col-lg-12 col-md-12 col-sm-12">
+                            <div className="d-flex align-items-center flex-wrap justify-content-center">
+                                <input type='text' placeholder="Visit Place" style={{height:'50px',borderRadius:'16px',border:'none'}}/>
+                                <p className="fw-bold fs-3 mt-3 ms-3 me-3">Check In</p>
+                                <input type='date' style={{height:'50px',borderRadius:'16px',border:'none'}}/>
+                                <p className="fw-bold fs-3 mt-3 ms-3 me-3">Check Out</p>
+                                <input type='date' style={{height:'50px',borderRadius:'16px',border:'none'}}/>
+                                <button type="button" class="btn btn-secondary btn-lg" style={{borderRadius:'16px'}}><FontAwesomeIcon icon={faSearch} /></button>
                             </div>
                         </div> 
                     </div>
