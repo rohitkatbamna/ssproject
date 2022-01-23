@@ -9,7 +9,7 @@ function Notsurecomponent(){
     const ranCity = city[ranNumber];
     return(
         <div className="not-sure-component-what-all-of-it">
-            <div className="container-fluid card shadow">
+            <div className="container-fluid card shadow not-sure-component-card-con">
                 <div className="card-body row">
                     <div className="col-12 text-center">
                         <p className="fs-1 fw-bold" style={{marginTop:'100px'}}>Not sure where to go ? Perfect</p>

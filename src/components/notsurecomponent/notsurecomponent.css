@@ -8,6 +8,11 @@
     margin-top: 25px;
 }
 
+.not-sure-component-card-con {
+    background-image: url('../../assets/travel.jpg');
+    background-repeat: no-repeat;
+}
+
 @media only screen and (max-width:800px) {
     .not-sure-component-what-all-of-it {
         margin-left: 10px;
