@@ -1,25 +1,26 @@
-import { faArrowCircleRight, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faArrowCircleDown, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useState , useEffect} from "react";
 import './landingcontent.css';
 import axios from "axios";
-import { useState } from "react/cjs/react.development";
+import berlin from "../../assets/places";
 
 function Landingcontentmain(){
-    const [search, setSearch] = useState('mumbai');
-    const [destinationid, setDestinationid] = useState('1735370');
+    const [search, setSearch] = useState('');
+    const [destinationid, setDestinationid] = useState('');
     const [checkin, setCheckin] = useState('');
     const [checkout, setCheckout] = useState('');
     const [results, setResults] = useState([]);
+
     function onChangefun(event){
-        setSearch(event.target.value)
+        setSearch(event.target.value);
     }
     function onChangedate(event){
-       setCheckin(event.target.value)
+       setCheckin(event.target.value);
     }
     function onChangedate1(event){
-        setCheckout(event.target.value)
-     }
+        setCheckout(event.target.value);
+    }
     const options = {
       method: 'GET',
       url: 'https://hotels4.p.rapidapi.com/locations/v2/search',
@@ -56,67 +57,80 @@ function Landingcontentmain(){
         }
       };
     function onClick(){
+        
         axios.request(options).then(function (response) {
             console.log(response.data.suggestions[0].entities[0].destinationId);
             setDestinationid(response.data.suggestions[0].entities[0].destinationId)
         }).catch(function (error) {
             console.error(error);
+            
         });
         axios.request(options1).then(function (response) {
             console.log(response.data.searchResults.results);
             setResults(response.data.searchResults.results);
         }).catch(function (error) {
             console.error(error);
+            
         });
 
     }
+    useEffect(() => {
+        onClick()
+    }, [destinationid]);
+    
+    
+        
     return(
         <div>        
             <div className="card shadow landing-content-main-all-of-it">
                 <div className="card-body container-fluid "> 
                     <div className="row" style={{marginTop:'100px'}}>
-                        <div className="col-xl-6 col-xxl-6 col-lg-7 col-md-12 ms-auto me-auto text-center">
+                        <div className="col-xl-6 col-xxl-6 col-lg-7 col-md-9 ms-auto me-auto text-center">
                             <h1 className="fw-bold landing-content-main-world-wide">
                                 Life is Short And the World is Wide 
                             </h1>
                             <p style={{fontWeight:'600'}}>
                                 To get the best of adventure you just need to leave and go where you like. We are waiting for you
                             </p>
-                            <button type="button" className="btn btn-lg" style={{backgroundColor:'#935B4F',borderRadius:'26px',color:'white',fontWeight:'600'}}>Plan A Trip <FontAwesomeIcon icon={faArrowCircleRight}/></button>
+                            <button type="button" className="btn btn-lg" style={{backgroundColor:'#935B4F',borderRadius:'26px',color:'white',fontWeight:'600'}}>Plan A Trip <FontAwesomeIcon icon={faArrowCircleDown}/></button>
                         </div>
                     </div>
                     <div className="row">
-                        <div className="col-xl-6 col-xxl-6 col-lg-7 col-md-10 ms-auto me-auto mt-5">
-                            <div className="input-group mb-3" style={{height:'70px'}}>
-                                <input type="text" className="form-control" placeholder="Location" aria-label="Recipient's username" aria-describedby="button-addon2" style={{borderRadius:'16px'}} onChange={onChangefun}/>
+                        <div className="col-xl-8 col-xxl-8 col-lg-9 col-md-12 col-sm-12 ms-auto me-auto mt-5">
+                            <div className="input-group mb-3 d-flex align-items-center flex-wrap" style={{height:'70px'}}>
+                                <input type="text" className="form-control" placeholder="Berlin" aria-label="Recipient's username" aria-describedby="button-addon2" style={{borderRadius:'16px'}} onChange={onChangefun}/>
+                                <h4 className="ms-2 me-2">Check In</h4>
                                 <input type="date" className="form-control" placeholder="Date" aria-label="Date" aria-describedby="button-addon2" style={{borderRadius:'16px'}} onChange={onChangedate}/>
+                                <h4 className="ms-2 me-2">Check Out</h4>
                                 <input type="date" className="form-control" placeholder="Date" aria-label="Date" aria-describedby="button-addon2" style={{borderRadius:'16px'}} onChange={onChangedate1}/>
-                                <button className="btn btn-danger" type="button" id="button-addon2" style={{borderRadius:'46px',width:'60px'}}onClick={onClick}><FontAwesomeIcon icon={faSearch} /></button>
+                                <button className="btn btn-danger samplechangebutton" type="button" id="button-addon2" style={{borderRadius:'46px',width:'60px'}}onClick={onClick}><FontAwesomeIcon icon={faSearch} /></button>
                             </div>
                         </div> 
                     </div>
                 </div>
             </div>
             <div className="container-fluid">
-                <div className="row">
+                <div className="row main-landing-content-card-image-margin">
                     
-                        {results.map(newsdata =>
+                        {berlin.map(newsdata =>
                             {
                             return(
-                                <div className="col-5 ms-auto me-auto mt-5 mb-5">
-                                    <div className="card shadow text-center" style={{ borderRadius:'16px'}}>
+                                <div className="col-xl-3 col-xxl-3 col-lg-4 col-md-5 col-sm-7 ms-auto me-auto mt-5 mb-5">
+                                    <div className="card shadow text-center" style={{ borderRadius:'16px',minHeight:'474px'}}>
+                                        <img src={newsdata.optimizedThumbUrls.srpDesktop} style={{height:'50%'}} alt={newsdata.name} />
                                         <div className="card-body">
-                                            <h2 className="fw-bold">{newsdata.name}</h2>
-                                            <h3>{newsdata.address.streetAddress}</h3>
-                                            <img src={newsdata.optimizedThumbUrls.srpDesktop} style={{height:'50%'}} alt={newsdata.name} />
-                                            <h4 className="mt-3">Current Price {newsdata.ratePlan.price.current}</h4>
+                                            <h2 className="fw-bold card-title">{newsdata.name}</h2>
+                                            <h3 className="card-text">{newsdata.address.streetAddress}</h3>
+                                            <h4 className="card-text">{newsdata.address.locality} {newsdata.address.postalCode}</h4>
+                                            <h4 className="mb-auto fw-bold float-bottom">Current Price {newsdata.ratePlan.price.current}</h4>
                                         </div>
                                     </div>
                                 </div>
                             );
-                            })
+                            }
+                            )
                         }
-                 
+                
                 </div>
             </div>
         </div>

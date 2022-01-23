@@ -20,9 +20,13 @@
     margin-bottom: 50px;
 }
 
+
+
 @media only screen and (max-width:800px) {
     .landing-content-main-all-of-it {
         margin-left: 10px;
         margin-right: 10px;
     }
+
+
 }
