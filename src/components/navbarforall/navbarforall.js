@@ -34,7 +34,7 @@ function Navbarforall(){
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <div class="nav-link">Contact Us</div>
+                                <Link to='/contactus' style={{textDecoration:'none'}}><div class="nav-link">Contact Us</div></Link>
                             </li>
                         </ul>
                         <form class="d-flex">
