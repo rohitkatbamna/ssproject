@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logomain from '../../assets/luggage.png';
 import './navbarforall.css';
 
@@ -9,17 +10,17 @@ function Navbarforall(){
             <div className="card-body">
                 <nav class="navbar navbar-expand-lg navbar-light" >
                     <div class="container-fluid">
-                        <div class="navbar-brand fw-bold"><img src={logomain} style={{height:'50px'}} alt='MainLogo'/> Good<span style={{color:'red'}}>Stays</span></div>
+                        <Link to='/' style={{textDecoration:'none'}}><div class="navbar-brand fw-bold"><img src={logomain} style={{height:'50px'}} alt='MainLogo'/> Good<span style={{color:'red'}}>Stays</span></div></Link>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <div className="nav-link">Home</div>
+                                <Link to='/' style={{textDecoration:'none'}} ><div className="nav-link">Home</div></Link>
                             </li>
                             <li class="nav-item">
-                                <div className="nav-link">Reviews</div>
+                                <Link to='/reviews' style={{textDecoration:'none'}}><div className="nav-link">Reviews</div></Link>
                             </li>
                             <li class="nav-item dropdown">
                                 <div class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
