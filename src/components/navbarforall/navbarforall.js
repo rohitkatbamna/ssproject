@@ -33,9 +33,9 @@ function Navbarforall(){
                                     <Link to='/barcelona'style={{textDecoration:'none'}}><li><div class="dropdown-item">Barcelona</div></li></Link>
                                     <Link to='/bangkok'style={{textDecoration:'none'}}><li><div class="dropdown-item">Bangkok</div></li></Link>
                                     <Link to='/losangeles'style={{textDecoration:'none'}}><li><div class="dropdown-item">Los Angeles</div></li></Link>
-                                    <li><div class="dropdown-item">Berlin</div></li>
-                                    <li><div class="dropdown-item">Mumbai</div></li>
-                                    <li><div class="dropdown-item">Delhi</div></li>
+                                    <Link to='/berlin' style={{textDecoration:'none'}}><li><div class="dropdown-item">Berlin</div></li></Link>
+                                    <Link to='/mumbai'style={{textDecoration:'none'}}><li><div class="dropdown-item">Mumbai</div></li></Link>
+                                    <Link to='/delhi' style={{textDecoration:'none'}}><li><div class="dropdown-item">Delhi</div></li></Link>
                                 </ul>
                             </li>
                             <li class="nav-item">

@@ -1,30 +1,30 @@
 import React from "react";
-import './berlincomponent.css';
-import berlinimage from '../../assets/berlin.jpg';
+import './mumbaicomponent.css';
+import mumbaiimage from '../../assets/mumbai.jpg';
 import cityobject from "../../assets/places";
 
-function Berlincomponent(){
+function Mumbaicomponent(){
     return(
-        <div className="berlin-component-all-of-it-change-margin">
+        <div className="mumbai-component-all-of-it-change-margin">
             <div className="card shadow container-fluid">
                 <div className="card-body">
                     <div>
                     <div className="col-12 ">
-                        <img src={berlinimage} className="card-img-top" alt="paris" style={{height:'60%', width:'100%'}}/>
-                        <p className="card-title text-center fs-1 fw-bold">Berlin</p>
+                        <img src={mumbaiimage} className="card-img-top" alt="paris" style={{height:'60%', width:'100%'}}/>
+                        <p className="card-title text-center fs-1 fw-bold">Mumbai</p>
                         <p className="fs-4">
-                        Pulsating with museums, tasty beer, cultural landmarks, creative minds, an unimaginable history and a wild nightlife, Berlin is a city celebrated for its freedom, creativity and grungy cool attitude. It’s a city like no other in the world, and just in case you ever needed a reason to visit.
+                        Also known as the City of Dreams, Mumbai is much more than just a bustling commercial capital; it is a phenomenon that everyone ought to experience. From its railway network that achieves nothing short of miracles everyday – carrying more passengers per kilometre than any railway network on earth – to its incredible ways of fostering a 20 plus million strong population that grows by the day.
                         </p>
-                        <p className="card-title text-center fs-1 fw-bold">Why Visit Berlin?</p>
+                        <p className="card-title text-center fs-1 fw-bold">Why Visit Mumbai?</p>
                         <p className="fs-4">
-                        From the Soviet Memorial in Treptower Park and the remains of the Berlin Wall at East Side Gallery to the chilling Holocaust Memorial, from the Stasi Museum and the Book Burning Square, Berlin has been through a lot and its tumultuous history stands out. The city’s monuments and museums pay tribute to its tragedies and will give visitors goosebumps and an understanding of the history that continues to shape the city today.
+                        Mumbai undoubtedly is among your finest options if you’re looking to sample India’s vibrant urban nightlife. From swanky clubs and lounges to edgy alternate and underground music venues, the city has something to offer everyone. It is also safer and better connected than other cities, making your night out a stress free event.
                         </p>
                     </div>
                     </div>
                     <div className="container-fluid">
                     <div className="row main-landing-content-card-image-margin">
                         <div className="col-12 text-center"><p className="fs-1 fw-bold">Best Hotels</p></div>
-                        {cityobject.ber.map(newsdata =>
+                        {cityobject.mum.map(newsdata =>
                             {
                             return(
                                 <div className="col-xl-3 col-xxl-3 col-lg-4 col-md-5 col-sm-7 ms-auto me-auto mt-5 mb-5">
@@ -50,4 +50,4 @@ function Berlincomponent(){
         </div>
     );
 }
-export default Berlincomponent;
+export default Mumbaicomponent;

@@ -1,30 +1,31 @@
 import React from "react";
-import './berlincomponent.css';
-import berlinimage from '../../assets/berlin.jpg';
+import './delhicomponent.css';
+import delhiimage from '../../assets/delhi.jpg';
 import cityobject from "../../assets/places";
 
-function Berlincomponent(){
+function Delhicomponent(){
     return(
-        <div className="berlin-component-all-of-it-change-margin">
+        <div className="delhi-component-all-of-it-change-margin">
             <div className="card shadow container-fluid">
                 <div className="card-body">
                     <div>
                     <div className="col-12 ">
-                        <img src={berlinimage} className="card-img-top" alt="paris" style={{height:'60%', width:'100%'}}/>
-                        <p className="card-title text-center fs-1 fw-bold">Berlin</p>
+                        <img src={delhiimage} className="card-img-top" alt="paris" style={{height:'60%', width:'100%'}}/>
+                        <p className="card-title text-center fs-1 fw-bold">Delhi</p>
                         <p className="fs-4">
-                        Pulsating with museums, tasty beer, cultural landmarks, creative minds, an unimaginable history and a wild nightlife, Berlin is a city celebrated for its freedom, creativity and grungy cool attitude. It’s a city like no other in the world, and just in case you ever needed a reason to visit.
+                        Delhi is a unique place to every other city world over. First time travelers might get a sensory overload with the pollution, chaos, exotic cuisine, rich culture, colors, shopping marketplaces, history and architecture. There is so much to explore in this alluring city unlike any other that attracts so many tourists from around the world every year. 
                         </p>
-                        <p className="card-title text-center fs-1 fw-bold">Why Visit Berlin?</p>
+                        <p className="card-title text-center fs-1 fw-bold">Why Visit Delhi?</p>
                         <p className="fs-4">
-                        From the Soviet Memorial in Treptower Park and the remains of the Berlin Wall at East Side Gallery to the chilling Holocaust Memorial, from the Stasi Museum and the Book Burning Square, Berlin has been through a lot and its tumultuous history stands out. The city’s monuments and museums pay tribute to its tragedies and will give visitors goosebumps and an understanding of the history that continues to shape the city today.
+                        Delhi is the place where you can find both rich ancient heritage that perfectly blends with the present modern times. There are fascinating historical monuments and structures that are known for amazing architecture that showcase the rich heritage of India.
+                        Delhi is synonymous with the tall minaret called Qutub Minar, the India Gate for the homage, one of the oldest and biggest masjids - Jama Masjid, the famous Red Fort, and the list keeps adding on. In addition to the ancient architectural structures, there are also the well   appointed places such as gardens, museums, the metro system, modern temples such as the Bahai Lotus Temple, etc.      
                         </p>
                     </div>
                     </div>
                     <div className="container-fluid">
                     <div className="row main-landing-content-card-image-margin">
                         <div className="col-12 text-center"><p className="fs-1 fw-bold">Best Hotels</p></div>
-                        {cityobject.ber.map(newsdata =>
+                        {cityobject.del.map(newsdata =>
                             {
                             return(
                                 <div className="col-xl-3 col-xxl-3 col-lg-4 col-md-5 col-sm-7 ms-auto me-auto mt-5 mb-5">
@@ -50,4 +51,4 @@ function Berlincomponent(){
         </div>
     );
 }
-export default Berlincomponent;
+export default Delhicomponent;

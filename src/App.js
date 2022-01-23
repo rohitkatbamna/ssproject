@@ -7,6 +7,9 @@ import Parispage from './pages/parispage';
 import Barcelonapage from './pages/barcelonapage';
 import Bangkokpage from './pages/bangkokpage';
 import Losangelespage from './pages/losangelespage';
+import Berlinpage from './pages/berlinpage';
+import Mumbaipage from './pages/mumbaipage';
+import Delhipage from './pages/delhipage';
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
           <Route path='/barcelona' element={<Barcelonapage />}/>
           <Route path='/bangkok' element={<Bangkokpage />}/>
           <Route path='/losangeles' element={<Losangelespage />}/>
+          <Route path='/berlin' element={<Berlinpage />}/>
+          <Route path='/mumbai' element={<Mumbaipage />}/>
+          <Route path='/delhi' element={<Delhipage />}/>
         </Routes>
       </Router>
     </div>
