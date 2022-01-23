@@ -4,6 +4,9 @@ import barsolonaimage from '../../assets/barcelona.jpg';
 import cityobject from "../../assets/places";
 
 function Barcelonacomponent(){
+    React.useEffect(()=>{
+        window.scrollTo(0,0);
+      }, []);
     return(
         <div className="barsolona-component-all-of-it-change-margin">
             <div className="card shadow container-fluid">

@@ -4,6 +4,9 @@ import berlinimage from '../../assets/berlin.jpg';
 import cityobject from "../../assets/places";
 
 function Berlincomponent(){
+    React.useEffect(()=>{
+        window.scrollTo(0,0);
+      }, []);
     return(
         <div className="berlin-component-all-of-it-change-margin">
             <div className="card shadow container-fluid">

@@ -4,6 +4,9 @@ import bangkokimage from '../../assets/bangkok.jpg';
 import cityobject from "../../assets/places";
 
 function Bangkokcomponent(){
+    React.useEffect(()=>{
+        window.scrollTo(0,0);
+      }, []);
     return(
         <div className="bangkok-component-all-of-it-change-margin">
             <div className="card shadow container-fluid">

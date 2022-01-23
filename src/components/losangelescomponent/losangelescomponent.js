@@ -4,6 +4,9 @@ import losangelesimage from '../../assets/losangeles.jpg';
 import cityobject from "../../assets/places";
 
 function Losangelescomponent(){
+    React.useEffect(()=>{
+        window.scrollTo(0,0);
+      }, []);
     return(
         <div className="bangkok-component-all-of-it-change-margin">
             <div className="card shadow container-fluid">

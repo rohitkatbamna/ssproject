@@ -4,6 +4,7 @@ import React, { useState , useEffect} from "react";
 import './landingcontent.css';
 import axios from "axios";
 import cityobject from '../../assets/places';
+import Notsurecomponent from "../notsurecomponent/notsurecomponent";
 
 function Landingcontentmain(){
     const [search, setSearch] = useState('');
@@ -109,30 +110,7 @@ function Landingcontentmain(){
                     </div>
                 </div>
             </div>
-            <div className="container-fluid">
-                <div className="row main-landing-content-card-image-margin">
-                    
-                        {cityobject.ber.map(newsdata =>
-                            {
-                            return(
-                                <div className="col-xl-3 col-xxl-3 col-lg-4 col-md-5 col-sm-7 ms-auto me-auto mt-5 mb-5">
-                                    <div className="card shadow text-center" style={{ borderRadius:'16px',minHeight:'474px'}}>
-                                        <img src={newsdata.optimizedThumbUrls.srpDesktop} style={{height:'50%'}} alt={newsdata.name} />
-                                        <div className="card-body">
-                                            <h2 className="fw-bold card-title">{newsdata.name}</h2>
-                                            <h3 className="card-text">{newsdata.address.streetAddress}</h3>
-                                            <h4 className="card-text">{newsdata.address.locality} {newsdata.address.postalCode}</h4>
-                                            <h4 className="mb-auto fw-bold float-bottom">Current Price {newsdata.ratePlan.price.current}</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                            }
-                            )
-                        }
-                
-                </div>
-            </div>
+            <Notsurecomponent />
         </div>
     );
 }

@@ -2,7 +2,11 @@ import React from "react";
 import './pariscomponent.css';
 import parisimage from '../../assets/paris.jpg';
 import cityobject from "../../assets/places";
+
 function Pariscomponent(){
+    React.useEffect(()=>{
+        window.scrollTo(0,0);
+      }, []);
     return(
         <div className="paris-component-all-of-it-change-margin">
             <div className="card shadow container-fluid">
