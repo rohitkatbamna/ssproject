@@ -30,9 +30,9 @@ function Navbarforall(){
                                     <li><div class="dropdown-item" style={{color:'red',fontWeight:'600'}}>Our Favourite</div></li>
                                     <li><hr class="dropdown-divider" /></li>
                                     <Link to='/paris'style={{textDecoration:'none'}}><li><div class="dropdown-item">Paris</div></li></Link>
-                                    <li><div class="dropdown-item">Barcelona</div></li>
-                                    <li><div class="dropdown-item">Bangkok</div></li>
-                                    <li><div class="dropdown-item">Los Angeles</div></li>
+                                    <Link to='/barcelona'style={{textDecoration:'none'}}><li><div class="dropdown-item">Barcelona</div></li></Link>
+                                    <Link to='/bangkok'style={{textDecoration:'none'}}><li><div class="dropdown-item">Bangkok</div></li></Link>
+                                    <Link to='/losangeles'style={{textDecoration:'none'}}><li><div class="dropdown-item">Los Angeles</div></li></Link>
                                     <li><div class="dropdown-item">Berlin</div></li>
                                     <li><div class="dropdown-item">Mumbai</div></li>
                                     <li><div class="dropdown-item">Delhi</div></li>
