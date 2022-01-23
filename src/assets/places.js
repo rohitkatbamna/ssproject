@@ -4338,7 +4338,7 @@ const barcelona= [
       }
     }
 ]
-const bagcok =[
+const bangkok =[
     {
       "id": 126215,
       "name": "Grand Hyatt Erawan Bangkok - SHA Plus",
