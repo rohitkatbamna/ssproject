@@ -29,10 +29,13 @@ function Navbarforall(){
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><div class="dropdown-item" style={{color:'red',fontWeight:'600'}}>Our Favourite</div></li>
                                     <li><hr class="dropdown-divider" /></li>
-                                    <li><div class="dropdown-item">Paris</div></li>
+                                    <Link to='/paris'style={{textDecoration:'none'}}><li><div class="dropdown-item">Paris</div></li></Link>
                                     <li><div class="dropdown-item">Barcelona</div></li>
                                     <li><div class="dropdown-item">Bangkok</div></li>
                                     <li><div class="dropdown-item">Los Angeles</div></li>
+                                    <li><div class="dropdown-item">Berlin</div></li>
+                                    <li><div class="dropdown-item">Mumbai</div></li>
+                                    <li><div class="dropdown-item">Delhi</div></li>
                                 </ul>
                             </li>
                             <li class="nav-item">

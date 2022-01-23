@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState , useEffect} from "react";
 import './landingcontent.css';
 import axios from "axios";
-import berlin from "../../assets/places";
+import cityobject from '../../assets/places';
 
 function Landingcontentmain(){
     const [search, setSearch] = useState('');
@@ -112,7 +112,7 @@ function Landingcontentmain(){
             <div className="container-fluid">
                 <div className="row main-landing-content-card-image-margin">
                     
-                        {berlin.map(newsdata =>
+                        {cityobject.ber.map(newsdata =>
                             {
                             return(
                                 <div className="col-xl-3 col-xxl-3 col-lg-4 col-md-5 col-sm-7 ms-auto me-auto mt-5 mb-5">

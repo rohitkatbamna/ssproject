@@ -6185,4 +6185,14 @@ const bangkok =[
       }
     }
 ]
-export default berlin;
+
+const cityobject={
+  ber : berlin,
+  par : paris,
+  mum : mumbai,
+  del : delhi ,
+  los : losangeles,
+  bar : barcelona,
+  ban : bangkok
+}
+export default cityobject;
